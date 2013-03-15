@@ -9,7 +9,8 @@ define([
     'backbone',
     'views/app'
 ],
-function( $, _, Backbone, appView ) {
+
+function ($, _, Backbone, appView) {
     'use strict';
 
     return new (Backbone.Router.extend({
@@ -24,21 +25,20 @@ function( $, _, Backbone, appView ) {
             '*actions': 'home'
         },
 
-        home: function() {
+        home: function () {
             appView.render('home');
         },
 
-        history: function() {
+        history: function () {
             appView.render('history');
         },
 
-        experience: function() {
+        experience: function () {
             appView.render('experience');
         },
-        
-        contact: function() {
+
+        contact: function () {
             appView.render('contact');
         }
     }))();
 });
-

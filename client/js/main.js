@@ -79,6 +79,6 @@ require.config({
     }
 });
 
-define(['loader'], function(Loader) {
+define(['loader'], function (Loader) {
     Loader.initialize();
 });

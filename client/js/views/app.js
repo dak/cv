@@ -11,7 +11,8 @@ define([
     'text!templates/main.html',
     'less!styles/main'
 ],
-function( $, _, Backbone, header, template ) {
+
+function ($, _, Backbone, header, template) {
     'use strict';
 
     var _loaded;
@@ -21,18 +22,18 @@ function( $, _, Backbone, header, template ) {
 
         render: function (page) {
             // Only render the template once
-            if ( !_loaded ) {
-                this.$el.html( template );
+            if (!_loaded) {
+                this.$el.html(template);
 
                 // Render the navigation header
-                header.setElement( $('header') ).render(page);
+                header.setElement($('header')).render(page);
 
                 _loaded = true;
             }
 
             // Lazy-load the page
-            require(['views/'+page+'/'+page], function (view) {
-                view.setElement( $('#'+page) ).render();
+            require(['views/' + page + '/' + page], function (view) {
+                view.setElement($('#' + page)).render();
             });
         }
     }))();

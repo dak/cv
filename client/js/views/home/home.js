@@ -10,16 +10,17 @@ define([
     'handlebars',
     'text!templates/home/home.html'
 ],
-function( $, _, Backbone, Handlebars, template ) {
+
+function ($, _, Backbone, Handlebars, template) {
     'use strict';
 
     return new (Backbone.View.extend({
-        initialize: function() {
+        initialize: function () {
             this.template = Handlebars.compile(template);
         },
 
-        render: function() {
-            this.$el.html( this.template() );
+        render: function () {
+            this.$el.html(this.template());
         }
     }))();
 });

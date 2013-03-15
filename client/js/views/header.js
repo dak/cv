@@ -11,11 +11,12 @@ define([
     'text!templates/header.html',
     'swag'
 ],
-function( $, _, Backbone, Handlebars, template ) {
+
+function ($, _, Backbone, Handlebars, template) {
     'use strict';
 
     return new (Backbone.View.extend({
-        initialize: function() {
+        initialize: function () {
             this.template = Handlebars.compile(template);
         },
 
@@ -24,14 +25,14 @@ function( $, _, Backbone, Handlebars, template ) {
 
             this.activePage = page || this.activePage;
 
-            if ( typeof this.activePage === 'object' ) {
-                this.activePage = $( this.activePage.currentTarget ).attr('href');
+            if (typeof this.activePage === 'object') {
+                this.activePage = $(this.activePage.currentTarget).attr('href');
             }
 
             // Remove leading and trailing slashes
             this.activePage = this.activePage.replace(/^\/|\/$/g, '');
 
-            this.$el.html( this.template({
+            this.$el.html(this.template({
                 page: page
             }));
 
