@@ -20,7 +20,7 @@ function ($, _, Backbone, Handlebars, template) {
         },
 
         render: function () {
-            this.$el.html(this.template());
+            this.$el.html(this.template()).show();
         }
     }))();
 });

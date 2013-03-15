@@ -23,7 +23,7 @@ function ($, _, Backbone, Handlebars, skills, template) {
         },
 
         render: function () {
-            this.$el.html(this.template());
+            this.$el.html(this.template()).show();
         }
     }))();
 });

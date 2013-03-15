@@ -17,12 +17,10 @@ function ($, _, Backbone, Handlebars, template) {
     return new (Backbone.View.extend({
         initialize: function () {
             this.template = Handlebars.compile(template);
-
-            skills.on('reset', this.render, this);
         },
 
         render: function () {
-            this.$el.html(this.template());
+            this.$el.html(this.template()).show();
         }
     }))();
 });

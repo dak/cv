@@ -19,12 +19,14 @@ function (_, Backbone) {
 
             // Catch internal application links and let Backbone handle the routing
             $(document).on('click', 'a:not([data-bypass])', function (e) {
-                var href = $(this).attr('href'),
-                    protocol = this.protocol + '//';
+                var external = new RegExp('^((f|ht)tps?:)?//'),
+                    href = $(this).attr('href');
 
-                if (href && href !== '#' && href.slice(protocol.length) !== protocol) {
-                    e.preventDefault();
+                e.preventDefault();
 
+                if (external.test(href)) {
+                    window.open(href, '_blank');
+                } else {
                     router.navigate(href, {
                         trigger: true
                     });

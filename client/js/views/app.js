@@ -33,6 +33,7 @@ function ($, _, Backbone, header, template) {
 
             // Lazy-load the page
             require(['views/' + page + '/' + page], function (view) {
+                $('.page').hide(); // Hide other pages
                 view.setElement($('#' + page)).render();
             });
         }
