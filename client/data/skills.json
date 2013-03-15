@@ -1,0 +1,16 @@
+[
+    {
+        name: 'Javascript',
+        tag: 'javascript',
+        percent: 95,
+        description: 'Description for skill goes here.',
+        subskills: [
+            {
+                name: 'Node.js',
+                tag: 'nodejs',
+                percent: 80,
+                description: 'Description for skill goes here.'
+            }
+        ]
+    }
+]

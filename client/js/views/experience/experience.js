@@ -8,7 +8,7 @@ define([
     'underscore',
     'backbone',
     'handlebars',
-    'collections/skills'
+    'collections/skills',
     'text!templates/experience/experience.html'
 ],
 
