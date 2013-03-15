@@ -11,7 +11,7 @@ require.config({
         handlebars: 'libs/handlebars/handlebars',
         underscore: 'libs/underscore/underscore',
         backbone: 'libs/backbone/backbone',
-        
+
         // Handlebars extensions
         swag: 'libs/handlebars/swag',
 
@@ -33,8 +33,18 @@ require.config({
         // Require.js plugins
         text: 'libs/require/plugins/text',
 
+        // Styles directory
+        styles: '../styles',
+
         // Handlebars templates directory
         templates: '../templates'
+    },
+
+    map: {
+        '*': {
+            'css': 'libs/require/plugins/require-css/css',
+            'less': 'libs/require/plugins/require-less/less'
+        }
     },
 
     // Sets the configuration for third party scripts that are not AMD compatible
@@ -49,7 +59,7 @@ require.config({
         'handlebars': {
             exports: 'Handlebars'
         },
-        
+
         'swag': ['handlebars'],
 
         // Twitter Bootstrap javascript files

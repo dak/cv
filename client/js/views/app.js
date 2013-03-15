@@ -8,7 +8,8 @@ define([
     'underscore',
     'backbone',
     'views/header',
-    'text!templates/main.html'
+    'text!templates/main.html',
+    'less!styles/main'
 ],
 function( $, _, Backbone, header, template ) {
     'use strict';
