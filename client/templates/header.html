@@ -10,10 +10,10 @@
 
     <div class="navbar">
         <ul class="nav">
-            <li class="active"><a href="home">Home</a></li>
-            <li><a href="history">History</a></li>
-            <li><a href="experience">Experience</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li class="{{#is page 'home'}}active{{/is}}"><a href="home" class="nav-item">Home</a></li>
+            <li class="{{#is page 'history'}}active{{/is}}"><a href="history" class="nav-item">History</a></li>
+            <li class="{{#is page 'experience'}}active{{/is}}"><a href="experience" class="nav-item">Experience</a></li>
+            <li class="{{#is page 'contact'}}active{{/is}}"><a href="contact" class="nav-item">Contact</a></li>
         </ul>
     </div>
 </nav>

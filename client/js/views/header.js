@@ -33,7 +33,7 @@ function ($, _, Backbone, Handlebars, template) {
             this.activePage = this.activePage.replace(/^\/|\/$/g, '');
 
             this.$el.html(this.template({
-                page: page
+                page: this.activePage
             }));
 
             return this;

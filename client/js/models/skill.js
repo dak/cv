@@ -16,7 +16,7 @@ function (_, Backbone) {
             name: 'Unknown',
             tag: 'unknown',
             percent: 0,
-            description: ''
+            description: '',
             subskills: []
         }
     });
