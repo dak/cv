@@ -16,9 +16,9 @@ function ($, _, Backbone, Skill) {
     return new (Backbone.Collection.extend({
         url: '/data/skills.json',
         model: Skill,
-        
+
         initialize: function() {
-            this.fetch();
+            this.fetch({ reset: true });
         }
     }))();
 });
